@@ -8,3 +8,14 @@ Thu 21 Mar 2024 10:42:39 PM UTC:
  tests:  1|4
 total_score: 10/70
 4f8afc6
+Thu 21 Mar 2024 10:57:16 PM UTC: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:64:11: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   64 |     *dato = (int*)next(L);
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+0e5a495
