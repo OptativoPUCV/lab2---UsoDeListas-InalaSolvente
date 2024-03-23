@@ -128,6 +128,7 @@ int parentesisBalanceados(char *cadena) {
         pop(pila);
       }
     }
+    printf("letra: %c\n",letra);
   }
   if (pila == NULL) return 1;
   return 0;
