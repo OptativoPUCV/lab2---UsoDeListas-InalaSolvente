@@ -119,14 +119,13 @@ int parentesisBalanceados(char *cadena) {
   for (unsigned short i = 0; i < cant; i++) {
     letra = cadena[i];
     if (letra == '(' || letra == '[' || letra == '{')
-      push(pila, &letra);
+      push(pila, letra);
     else if (letra == ')' || letra == ']' || letra == '}') {
       if (top(pila) == NULL)
         return 0;
-      primLetra = *(char *)top(pila);
-      if ((letra == ')' && primLetra != '(') || (letra == ']' && primLetra != '[') || (letra == '}' && primLetra != '{'))
-        return 0;
-      else pop(pila);
+      primLetra = top(pila);
+      if ((letra == ')' && primLetra == '(') || (letra == ']' && primLetra == '[') || (letra == '}' && primLetra == '{'))
+        pop(pila);
     }
   }
   if (top(pila) == NULL)
