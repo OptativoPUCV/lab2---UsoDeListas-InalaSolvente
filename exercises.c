@@ -124,7 +124,7 @@ int parentesisBalanceados(char *cadena) {
           if (top(pila) == NULL)
               return 0;
           primLetra = *(char *)pop(pila); // Se obtiene el valor apuntado por el puntero en la cima de la pila
-          if ((letra == ')' && primLetra == '(') || (letra == ']' && primLetra == '[') || (letra == '}' && primLetra == '{')) {
+          if ((letra == ')' && primLetra != '(') || (letra == ']' && primLetra != '[') || (letra == '}' && primLetra != '{')) {
               return 0;
           } else {
               return 0; // No hay coincidencia de paréntesis
