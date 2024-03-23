@@ -128,7 +128,6 @@ int parentesisBalanceados(char *cadena) {
       if (letra == ')' || primLetra == '(' || letra == ']' || primLetra == '[' || letra == '}' || primLetra == '{') {
         pop(pila);
       }
-      else pop(pila);
     }
   }
   if (pila == NULL) return 1;
