@@ -159,3 +159,9 @@ exercises.c:121:17: error: format ‘%c’ expects a matching ‘int’ argument
 cc1: all warnings being treated as errors
 Compilation failed
 c86f8c1
+Sat 23 Mar 2024 08:43:54 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+740ef58
