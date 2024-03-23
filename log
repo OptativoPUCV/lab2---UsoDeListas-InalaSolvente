@@ -146,3 +146,16 @@ exercises.c:121:5: error: ‘primLetra’ may be used uninitialized in this func
 cc1: all warnings being treated as errors
 Compilation failed
 9a8f728
+Sat 23 Mar 2024 08:43:49 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:17: error: format ‘%c’ expects a matching ‘int’ argument [-Werror=format=]
+  121 |     printf("%c %c", letra);
+      |                ~^
+      |                 |
+      |                 int
+cc1: all warnings being treated as errors
+Compilation failed
+c86f8c1
