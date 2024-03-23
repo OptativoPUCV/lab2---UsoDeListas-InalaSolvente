@@ -124,11 +124,11 @@ int parentesisBalanceados(char *cadena) {
     else if (letra == ')' || letra == ']' || letra == '}')
     {
       if (pila == NULL) return 0;
-      if (letra != '(' || letra == '[' || letra == '{') {
+      if (&letra == top(pila)) {
         pop(pila);
       }
+      else pop(pila);
     }
-    printf("letra: %c\n",letra);
   }
   if (pila == NULL) return 1;
   return 0;
