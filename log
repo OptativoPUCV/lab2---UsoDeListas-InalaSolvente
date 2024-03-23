@@ -135,3 +135,14 @@ Sat 23 Mar 2024 08:43:01 PM UTC:
  tests:  4|1
 total_score: 50/70
 94923c5
+Sat 23 Mar 2024 08:43:39 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:5: error: ‘primLetra’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  121 |     printf("%c %c", primLetra, letra);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9a8f728
