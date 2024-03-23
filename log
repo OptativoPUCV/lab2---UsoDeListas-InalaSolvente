@@ -301,3 +301,17 @@ Sat 23 Mar 2024 09:14:51 PM UTC:
  tests:  4|1
 total_score: 50/70
 ecd8bc7
+Sat 23 Mar 2024 11:35:59 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:13: error: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  130 |         aux = pop(pila);
+      |             ^
+exercises.c:118:26: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+  118 |   char letra, primLetra, aux;
+      |                          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+5948bd0
