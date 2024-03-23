@@ -116,20 +116,23 @@ int parentesisBalanceados(char *cadena) {
   Stack *pila = create_stack();
   int cant = strlen(cadena);
   char letra, primLetra;
-  for (unsigned short i = 0; i < cant; i++) {
-      letra = cadena[i];
-      if (letra == '(' || letra == '[' || letra == '{') {
-          push(pila, &letra); // Se empuja el puntero a 'letra' en la pila
-      } else if (letra == ')' || letra == ']' || letra == '}') {
-          if (top(pila) == NULL)
-              return 0;
-          primLetra = *(char *)pop(pila); // Se obtiene el valor apuntado por el puntero en la cima de la pila
-          if ((letra == ')' && primLetra != '(') || (letra == ']' && primLetra != '[') || (letra == '}' && primLetra != '{')) {
-              return 0;
+      for (unsigned short i = 0; i < cant; i++) {
+          letra = cadena[i];
+          if (letra == '(' || letra == '[' || letra == '{') {
+              push(pila, &letra);
+          } else if (letra == ')' || letra == ']' || letra == '}') {
+              if (top(pila) == NULL)
+                  return 0;  // No hay un paréntesis de apertura correspondiente en la pila
+              primLetra = *(char *)top(pila);
+              if ((letra == ')' && primLetra == '(') || (letra == ']' && primLetra == '[') || (letra == '}' && primLetra == '{')) {
+                  pop(pila); // Se elimina el paréntesis de apertura correspondiente de la pila
+              } else {
+                  return 0; // No coincide el paréntesis de cierre con el de apertura
+              }
           }
       }
+      if (top(pila) == NULL)
+          return 1; // Todos los paréntesis tienen su correspondiente de apertura y han sido eliminados de la pila
+      else
+          return 0; // Hay paréntesis sobrantes en la pila
   }
-  if (top(pila) == NULL)
-    return 1;
-  return 0;
-}
