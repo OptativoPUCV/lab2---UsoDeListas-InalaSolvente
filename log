@@ -326,3 +326,14 @@ exercises.c:118:26: error: variable ‘aux’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 b5cf534
+Sat 23 Mar 2024 11:39:21 PM UTC: 
+ exercises.c | 19 +++++++++----------
+ 1 file changed, 9 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:118:26: error: unused variable ‘aux’ [-Werror=unused-variable]
+  118 |   char letra, primLetra, aux;
+      |                          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+2130680

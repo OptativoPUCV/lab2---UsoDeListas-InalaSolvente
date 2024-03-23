@@ -117,20 +117,19 @@ int parentesisBalanceados(char *cadena) {
   int cant = strlen(cadena);
   char letra, primLetra, aux;
   for (unsigned short i = 0; i < cant; i++) {
-    letra = cadena[i];
-    
-    if (letra == '(' || letra == '[' || letra == '{')
-      push(pila, &letra);
-    
-    else if (letra == ')' || letra == ']' || letra == '}') {
-      if (top(pila) == NULL)
-        return 0;
-      primLetra = *(char*)top(pila);
-      if ((letra == ')' && primLetra == '(') || (letra == ']' && primLetra == '[') || (letra == '}' && primLetra == '{'))
-        aux = *(char*)pop(pila);
-    }
-    primLetra = *(char*)top(pila);
-    printf("%c", primLetra);
+      letra = cadena[i];
+      if (letra == '(' || letra == '[' || letra == '{') {
+          push(pila, &letra); // Se empuja el puntero a 'letra' en la pila
+      } else if (letra == ')' || letra == ']' || letra == '}') {
+          if (top(pila) == NULL)
+              return 0;
+          primLetra = *(char *)top(pila); // Se obtiene el valor apuntado por el puntero en la cima de la pila
+          if ((letra == ')' && primLetra == '(') || (letra == ']' && primLetra == '[') || (letra == '}' && primLetra == '{')) {
+              pop(pila);
+          } else {
+              return 0; // No hay coincidencia de paréntesis
+          }
+      }
   }
   if (top(pila) == NULL)
     return 1;
