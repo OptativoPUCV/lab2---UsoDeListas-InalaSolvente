@@ -123,11 +123,11 @@ int parentesisBalanceados(char *cadena) {
       push(pila,&letra);
     else if (letra == ')' || letra == ']' || letra == '}')
     {
-      if (pila == NULL) return 1;
-      if (&letra != top(pila)) return 1;
+      if (pila == NULL) return 0;
+      if (&letra != top(pila)) return 0;
       else pop(pila);
     }
   }
-   return 0;
+   return 1;
 }
 
