@@ -367,3 +367,21 @@ Sat 23 Mar 2024 11:47:32 PM UTC:
  tests:  4|1
 total_score: 50/70
 a90c014
+Sun 24 Mar 2024 12:02:44 AM UTC: 
+ exercises.c | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:119:18: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  119 |     char letra = (char)malloc(sizeof(char));
+      |                  ^
+exercises.c:120:5: error: invalid type argument of unary ‘*’ (have ‘int’)
+  120 |     *letra = cadena[i];
+      |     ^~~~~~
+exercises.c:128:7: error: ‘primLetra’ undeclared (first use in this function)
+  128 |       primLetra = *(char*)top(pila);
+      |       ^~~~~~~~~
+exercises.c:128:7: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+8966e1e
