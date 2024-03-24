@@ -457,3 +457,9 @@ exercises.c:123:14: error: ‘letra’ may be used uninitialized [-Werror=maybe-
 cc1: all warnings being treated as errors
 Compilation failed
 7d0d1a3
+Sun 24 Mar 2024 12:14:23 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|0
+total_score: 70/70
+57694d5
