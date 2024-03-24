@@ -385,3 +385,20 @@ exercises.c:128:7: note: each undeclared identifier is reported only once for ea
 cc1: all warnings being treated as errors
 Compilation failed
 8966e1e
+Sun 24 Mar 2024 12:06:37 AM UTC: 
+ exercises.c | 18 +++++++++++-------
+ 1 file changed, 11 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:15: error: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Werror=int-conversion]
+  136 |     primLetra = *(char*)top(pila);
+      |               ^
+exercises.c:137:14: error: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Werror=format=]
+  137 |     printf("%c", primLetra);
+      |             ~^   ~~~~~~~~~
+      |              |   |
+      |              int char *
+      |             %s
+cc1: all warnings being treated as errors
+Compilation failed
+c067de3
