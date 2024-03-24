@@ -116,13 +116,13 @@ int parentesisBalanceados(char *cadena) {
   List *lista = create_stack();
   int cant = strlen(cadena);
   char *primLetra;
-  for (unsigned short i = 0; i < cant - 1; i++) {
+  for (unsigned short i = 0; i < cant; i++) {
 
     
     if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{'){
       char *letra = (char*)malloc(sizeof(char));
       *letra = cadena[i];
-      push(lista, &letra);
+      push(lista, letra);
     }
     
     else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') {
