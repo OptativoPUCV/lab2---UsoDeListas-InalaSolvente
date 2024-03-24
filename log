@@ -443,3 +443,17 @@ Sun 24 Mar 2024 12:13:05 AM UTC:
  tests:  9|0
 total_score: 70/70
 36628a9
+Sun 24 Mar 2024 12:14:13 AM UTC: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:123:14: error: assignment to ‘char’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  123 |       *letra = (char*)malloc(sizeof(char));
+      |              ^
+exercises.c:123:14: error: ‘letra’ may be used uninitialized [-Werror=maybe-uninitialized]
+  123 |       *letra = (char*)malloc(sizeof(char));
+      |       ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7d0d1a3
