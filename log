@@ -402,3 +402,14 @@ exercises.c:137:14: error: format ‘%c’ expects argument of type ‘int’, b
 cc1: all warnings being treated as errors
 Compilation failed
 c067de3
+Sun 24 Mar 2024 12:06:50 AM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:15: error: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Werror=int-conversion]
+  136 |     primLetra = *(char*)top(pila);
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+a348a9c

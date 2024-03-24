@@ -134,7 +134,6 @@ int parentesisBalanceados(char *cadena) {
       else pop(pila);
     }
     primLetra = *(char*)top(pila);
-    printf("%c", primLetra);
   }
   if (top(pila) == NULL)
     return 1;
